@@ -5,7 +5,6 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.example.gniar.menus.*
 
-import com.example.gniar.room.PersonalDB
 import kotlinx.android.synthetic.main.activity_main.*
 
 // tanggal pengerjaan   : Senin, 31 Mei 2021

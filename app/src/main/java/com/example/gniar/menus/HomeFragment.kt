@@ -5,8 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import com.example.gniar.R
+import com.example.gniar.room.PersonalDB
 import kotlinx.android.synthetic.main.fragment_home.*
 
 // TODO: Rename parameter arguments, choose names that match
@@ -19,8 +19,8 @@ private const val ARG_PARAM2 = "param2"
  * Use the [HomeFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class HomeFragment : Fragment() {
-    // TODO: Rename and change types of parameters
+class HomeFragment() : Fragment() {
+    
     private var param1: String? = null
     private var param2: String? = null
 
@@ -42,6 +42,13 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+//        val db by lazy { }
+
+//        val me = db?.personalDao()?.getInfo()
+//
+//        myName.text = me?.nama
+//        bio.text = me?.des
+        
 
     }
 
