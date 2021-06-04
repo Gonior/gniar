@@ -19,6 +19,11 @@ private const val ARG_PARAM2 = "param2"
  * Use the [HomeFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
+// tanggal pengerjaan   : Senin, 31 Mei 2021
+// nim                  : 10118901
+// nama                 : Dedi Cahya
+// kelas                : IF11k
+
 class HomeFragment() : Fragment() {
     
     private var param1: String? = null

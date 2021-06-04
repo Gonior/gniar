@@ -8,6 +8,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_daily.view.*
+// tanggal pengerjaan   : Senin, 31 Mei 2021
+// nim                  : 10118901
+// nama                 : Dedi Cahya
+// kelas                : IF11k
 
 data class Daily(val title : String, val desc : String, val img : String)
 

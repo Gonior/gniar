@@ -12,6 +12,10 @@ import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_daily.view.*
 import kotlinx.android.synthetic.main.item_daily.view.title
 import kotlinx.android.synthetic.main.item_fav.view.*
+// tanggal pengerjaan   : Senin, 31 Mei 2021
+// nim                  : 10118901
+// nama                 : Dedi Cahya
+// kelas                : IF11k
 
 data class Fav(val title :String, val urlStr : String)
 class FavAdapter(private val favs:List<Fav>) : RecyclerView.Adapter<FavHolder>() {

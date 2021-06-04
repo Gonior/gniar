@@ -11,6 +11,10 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+// tanggal pengerjaan   : Senin, 31 Mei 2021
+// nim                  : 10118901
+// nama                 : Dedi Cahya
+// kelas                : IF11k
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 

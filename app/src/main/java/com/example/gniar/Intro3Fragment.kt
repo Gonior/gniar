@@ -9,6 +9,10 @@ import kotlinx.android.synthetic.main.fragment_intro3.*
 import android.content.Intent
 import android.widget.Button
 import kotlinx.android.synthetic.main.fragment_intro3.view.*
+// tanggal pengerjaan   : Senin, 31 Mei 2021
+// nim                  : 10118901
+// nama                 : Dedi Cahya
+// kelas                : IF11k
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER

@@ -9,6 +9,10 @@ import android.util.Log
 import android.view.WindowManager
 import com.example.gniar.room.Personal
 import com.example.gniar.room.PersonalDB
+// tanggal pengerjaan   : Senin, 31 Mei 2021
+// nim                  : 10118901
+// nama                 : Dedi Cahya
+// kelas                : IF11k
 
 class SplashScreen : AppCompatActivity() {
     private val db by lazy { PersonalDB(this) }

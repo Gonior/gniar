@@ -7,6 +7,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_friend.view.*
 
+// tanggal pengerjaan   : Senin, 31 Mei 2021
+// nim                  : 10118901
+// nama                 : Dedi Cahya
+// kelas                : IF11k
 
 
 class HorizontalAdapter(private val friends : List<Friend>) : RecyclerView.Adapter<FriendHolder>(){

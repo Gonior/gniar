@@ -35,7 +35,7 @@ class ProfileFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
-    val position = LatLng(-33.920455, 18.466941)
+
 
     override fun onCreate(savedInstanceState: Bundle?)  {
         super.onCreate(savedInstanceState)
@@ -85,7 +85,7 @@ class ProfileFragment : Fragment() {
             startActivity(wa)
         }
         btn_mail.setOnClickListener {
-            composeEmail(arrayOf("arthemuss@gmail.com" ), "From Gniar Apps")
+            composeEmail(arrayOf("arthemuss14@gmail.com" ), "From Gniar Apps")
         }
 
 
