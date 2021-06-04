@@ -42,13 +42,6 @@ class HomeFragment() : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//        val db by lazy { }
-
-//        val me = db?.personalDao()?.getInfo()
-//
-//        myName.text = me?.nama
-//        bio.text = me?.des
-        
 
     }
 

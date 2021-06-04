@@ -30,7 +30,7 @@ class SplashScreen : AppCompatActivity() {
             val intent = Intent(this, Intro::class.java)
             startActivity(intent)
             finish()
-        }, 5000)
+        }, 3000)
     }
 
     private fun createData() {

@@ -1,6 +1,8 @@
 package com.example.gniar.menus
 
+import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -36,18 +38,23 @@ class DailyFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+
+
         val listFriends = listOf(
-            Friend(name = "Agung Sepruloh", img="https://images.unsplash.com/photo-1622107562067-394847606d42?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=333&q=80"),
-            Friend(name = "Dedi Cahya", img="https://images.unsplash.com/photo-1622107562067-394847606d42?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=333&q=80"),
-            Friend(name = "Firman Alfinas", img = "https://images.unsplash.com/photo-1622107562067-394847606d42?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=333&q=80"),
+            Friend(name = "Agung Sepruloh", img=R.raw.fagung.toString()),
+            Friend(name = "Jarkasih", img=R.raw.fjarkasih.toString()),
+            Friend(name = "Firman Alfinas", img = R.raw.ffirman.toString()),
+            Friend(name = "Ridwan", img = R.raw.fridwan.toString()),
+            Friend("Burhan", R.raw.aburhan2.toString())
         )
 
         val listDaily = listOf(
-            Daily("Kerja", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam finibus nulla turpis, non venenatis ante tincidunt eget. Nunc ultricies nisl eget lacus porttitor mattis. Aenean a neque non justo tempor mattis id et mauris. Morbi in venenatis quam. Aenean luctus fringilla diam, ac porttitor erat tempus at. Morbi felis odio", "https://images.unsplash.com/photo-1622107562067-394847606d42?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=333&q=80"),
-            Daily("Kerja2", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam finibus nulla turpis, non venenatis ante tincidunt eget. Nunc ultricies nisl eget lacus porttitor mattis. Aenean a neque non justo tempor mattis id et mauris. Morbi in venenatis quam. Aenean luctus fringilla diam, ac porttitor erat tempus at. Morbi felis odio", "https://images.unsplash.com/photo-1622107562067-394847606d42?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=333&q=80"),
-            Daily("Kerja3", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam finibus nulla turpis, non venenatis ante tincidunt eget. Nunc ultricies nisl eget lacus porttitor mattis. Aenean a neque non justo tempor mattis id et mauris. Morbi in venenatis quam. Aenean luctus fringilla diam, ac porttitor erat tempus at. Morbi felis odio", "https://images.unsplash.com/photo-1622107562067-394847606d42?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=333&q=80"),
-            Daily("Kerja4", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam finibus nulla turpis, non venenatis ante tincidunt eget. Nunc ultricies nisl eget lacus porttitor mattis. Aenean a neque non justo tempor mattis id et mauris. Morbi in venenatis quam. Aenean luctus fringilla diam, ac porttitor erat tempus at. Morbi felis odio", "https://images.unsplash.com/photo-1622107562067-394847606d42?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=333&q=80"),
-            Daily("Kerja5", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam finibus nulla turpis, non venenatis ante tincidunt eget. Nunc ultricies nisl eget lacus porttitor mattis. Aenean a neque non justo tempor mattis id et mauris. Morbi in venenatis quam. Aenean luctus fringilla diam, ac porttitor erat tempus at. Morbi felis odio", "https://images.unsplash.com/photo-1622107562067-394847606d42?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=333&q=80")
+            Daily("Bekerja", "Bekerja bagai kuda :v", R.raw.akerja.toString()),
+            Daily("Ngoding", "Ngoding bagai kuda", R.raw.angoding.toString()),
+            Daily("Mabar", "Isqiqomah walau deadline udah mepet.", R.raw.amabar.toString()),
+            Daily("Sadboy", "Belum bisa move on :(", R.raw.asadboy.toString()),
+            Daily("Photographing", "Disuruh jadi tukang foto", R.raw.afoto2.toString())
         )
 
         val dailyListAdapter = DailyListAdapter(listDaily)

@@ -25,11 +25,9 @@ class GalelryListAdapter(private val img : List<Img>) : RecyclerView.Adapter<Gal
 }
 
 class GalelryHolder(view : View) : RecyclerView.ViewHolder(view) {
-//    private val title = view.title
     private val img = view.img
-
     fun bindDaily(i: Img) {
-//        title.text = i.title
-        Picasso.get().load(i.urlStr).into(img)
+
+        img.setImageResource(i.urlStr.toInt())
     }
 }

@@ -39,13 +39,17 @@ class GalelryFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val listOfImg = listOf(
-            Img("", "https://images.unsplash.com/photo-1622107562067-394847606d42?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=333&q=80"),
-            Img("", "https://images.unsplash.com/photo-1622107562067-394847606d42?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=333&q=80"),
-            Img("", "https://images.unsplash.com/photo-1622107562067-394847606d42?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=333&q=80"),
-            Img("", "https://images.unsplash.com/photo-1622107562067-394847606d42?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=333&q=80"),
-            Img("", "https://images.unsplash.com/photo-1622107562067-394847606d42?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=333&q=80"),
-            Img("", "https://images.unsplash.com/photo-1622107562067-394847606d42?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=333&q=80"),
-            Img("", "https://images.unsplash.com/photo-1622107562067-394847606d42?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=333&q=80"),
+            Img("", R.raw.amabar.toString()),
+            Img("", R.raw.afoto.toString()),
+            Img("", R.raw.asadboy.toString()),
+            Img("", R.raw.ffirman.toString()),
+            Img("", R.raw.angoding.toString()),
+            Img("", R.raw.afoto2.toString()),
+            Img("", R.raw.gabut.toString()),
+            Img("", R.raw.fagung.toString()),
+            Img("", R.raw.fjarkasih.toString()),
+            Img("", R.raw.aburhan2.toString()),
+
         )
         val galelryListAdapter = GalelryListAdapter(listOfImg)
         rvGaleryList.apply {

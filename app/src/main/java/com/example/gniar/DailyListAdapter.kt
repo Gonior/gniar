@@ -1,5 +1,7 @@
 package com.example.gniar
 
+import android.annotation.SuppressLint
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,10 +29,13 @@ class DailyHolder(view : View) : RecyclerView.ViewHolder(view) {
     private val title = view.title
     private val img = view.img
     private val desc = view.des
+    @SuppressLint("ResourceType")
     fun bindDaily(daily : Daily) {
         title.text = daily.title
         desc.text = daily.desc
-        Picasso.get().load(daily.img).into(img)
+
+        img.setImageResource(daily.img.toInt())
+
     }
 
 }

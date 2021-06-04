@@ -6,18 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.bumptech.glide.RequestManager
-import com.bumptech.glide.request.RequestOptions
+import com.example.gniar.Fav
+import com.example.gniar.FavAdapter
 import com.example.gniar.R
-import edmt.dev.videoplayer.adapter.VideoPlayerRecyclerAdapter
-import edmt.dev.videoplayer.model.MediaObject
-import edmt.dev.videoplayer.utils.VerticalSpacingItemDecorator
 import kotlinx.android.synthetic.main.fragment_fav.*
-import java.util.*
-import java.util.Arrays.asList
-import kotlin.collections.ArrayList
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -40,43 +33,27 @@ class FavFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
-    }
-    private fun initVideo() {
-        val layoutManager = LinearLayoutManager(activity)
-        video_player.layoutManager = layoutManager
-        val verticalItemDecor = VerticalSpacingItemDecorator(10)
-        video_player.addItemDecoration(verticalItemDecor)
 
-        val sourceVideos : ArrayList<MediaObject> = ArrayList(favs())
-        video_player.setMediaObjects(sourceVideos)
-        val adapter = VideoPlayerRecyclerAdapter(sourceVideos, initGlide())
-        video_player.adapter = adapter
-    }
-
-
-    private fun initGlide() : RequestManager? {
-        val options = RequestOptions()
-            .placeholder(R.drawable.white_background)
-            .error(R.drawable.white_background)
-        return Glide.with(this).setDefaultRequestOptions(options)
-    }
-    private fun favs() : List<MediaObject> {
-        return listOf(
-            MediaObject("The Greatest Show","https://drive.google.com/file/d/1eTFX0KpQUog9bI5LQOe23K6B_FkgpErr/view","https://i.ytimg.com/vi/NyVYXRD1Ans/maxresdefault.jpg",""),
-            MediaObject("The Greatest Show - The Other Side","http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4","https://i.ytimg.com/vi/NyVYXRD1Ans/maxresdefault.jpg",""),
-            MediaObject("Unstoppable - SIA ","http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4","https://i.ytimg.com/vi/cxjvTXo9WWM/maxresdefault.jpg",""),
-            MediaObject("We Don't Talk Anymore","http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4","https://i.ytimg.com/vi/3AtDnEC4zak/maxresdefault.jpg",""),
-
-        )
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val listOfFav = listOf(
+            Fav("Pop/Star - Kda (Live)","<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/p9oDlvOV3qs\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"),
+            Fav("Driver License","<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/2PRvp-mP_q0\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"),
+            Fav("The Greatest Showman","<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/NyVYXRD1Ans\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"),
+            Fav("Unstoppable - SIA","<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/h3h035Eyz5A?list=RDh3h035Eyz5A\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"),
 
-        initVideo()
+
+        )
+        val favAdapter = FavAdapter(listOfFav)
+        rvListFav.apply {
+            layoutManager = LinearLayoutManager(activity)
+            adapter = favAdapter
+        }
+
+
     }
-
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

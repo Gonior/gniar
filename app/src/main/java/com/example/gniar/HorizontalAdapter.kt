@@ -25,6 +25,6 @@ class FriendHolder(view : View) : RecyclerView.ViewHolder(view) {
     private val img = view.img
     fun bindFriend(friend: Friend) {
         nameOfFriends.text = friend.name
-        Picasso.get().load(friend.img).into(img)
+        img.setImageResource(friend.img.toInt())
     }
 }

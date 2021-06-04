@@ -6,13 +6,12 @@
     android:layout_height="match_parent"
     android:padding="10dp"
     tools:context=".menus.FavFragment">
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/rvListFav"
+        android:layout_height="match_parent"
+        ></androidx.recyclerview.widget.RecyclerView>
 
 
- <edmt.dev.videoplayer.VideoPlayerRecyclerView
-     android:id="@+id/video_player"
-     android:orientation="vertical"
-     android:layout_width="match_parent"
-     android:layout_height="match_parent"
-     ></edmt.dev.videoplayer.VideoPlayerRecyclerView>
 
 </RelativeLayout>
